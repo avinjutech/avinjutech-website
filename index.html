@@ -1,20 +1,142 @@
+<!-- avinjutech.in -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avinju Tech</title>
+    <title>Avinjutech - Innovative Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; }
-        .container { text-align: center; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        p { color: #666; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Avinju Tech</h1>
-        <p>Building the future. Coming Soon.</p>
-    </div>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                Avinjutech
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#product" class="text-gray-600 hover:text-blue-600 transition-colors">Our Product</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#contact" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#product" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Our Product</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">Solving Business Problems with Modern Technology</h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600">We build high-performance Software as a Service (SaaS) applications and provide expert IT consulting to help your business thrive in the digital age.</p>
+                <a href="#contact" class="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Services</h2>
+                    <p class="mt-4 text-gray-600">From concept to launch, we are your dedicated technology partner.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">SaaS Product Development</h3>
+                        <p class="text-gray-600">We design, build, and scale innovative Software as a Service products that solve real-world problems, just like our flagship app, nowaitinginq.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-4">
+                             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Custom App Development</h3>
+                        <p class="text-gray-600">Have a unique idea? We specialize in creating custom web and mobile applications tailored to your specific business needs, using the latest technologies.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">IT Consulting</h3>
+                        <p class="text-gray-600">Leverage our expertise to improve your existing applications, optimize your technology stack, and create a roadmap for future growth and success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Product Section -->
+        <section id="product" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <p>Building the future. Coming Soon.</p>
+                    <!-- <div>
+                        <span class="text-blue-600 font-semibold">OUR FLAGSHIP PRODUCT</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">nowaitinginq</h2>
+                        <p class="mt-4 text-gray-600">nowaitinginq is a revolutionary SaaS platform designed to eliminate queues for businesses and customers. From clinics and salons to local shops, our app provides a seamless, real-time queue management system that saves time and enhances customer satisfaction.</p>
+                        <a href="https://nowaitinginq.in" target="_blank" class="mt-6 inline-block bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-black transition-colors">Visit nowaitinginq.in</a>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-xl">
+                        <img src="https://placehold.co/600x400/0D8ABC/FFFFFF?text=App+Screenshot" alt="nowaitinginq App Screenshot" class="rounded-md">
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Mission</h2>
+                <p class="mt-6 text-lg text-gray-600">At Avinjutech, our mission is to empower businesses of all sizes with elegant, powerful, and intuitive software solutions. We believe that technology should be an enabler, simplifying complex problems and creating new opportunities for growth and efficiency.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Have a Project in Mind?</h2>
+                <p class="mt-4 text-gray-300">Let's build something great together. Reach out to us to discuss your idea.</p>
+                <a href="mailto:contact@avinjutech.in" class="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105">contact@avinjutech.in</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Avinjutech Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 </html>
