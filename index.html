@@ -1,344 +1,142 @@
+<!-- avinjutech.in -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avinjutech | Architecting the Future</title>
+    <title>Avinjutech - Innovative Software Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom Palette Variables */
-        :root {
-            --color-neon-cyan: #09cdf9;
-            --color-bright-teal: #0ed4db;
-            --color-deep-indigo: #1800ad;
-            --color-sky-blue: #38b6ff;
-            --color-royal-blue: #5170ff;
-            --bg-dark: #020412;
-        }
-
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--bg-dark);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        /* Ambient Background Glow */
-        .ambient-glow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: 
-                radial-gradient(circle at 15% 50%, rgba(24, 0, 173, 0.25), transparent 40%),
-                radial-gradient(circle at 85% 30%, rgba(9, 205, 249, 0.15), transparent 40%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* Futuristic Text Gradient */
-        .text-gradient {
-            background: linear-gradient(135deg, var(--color-neon-cyan), var(--color-sky-blue), var(--color-royal-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            animation: gradientMove 5s ease infinite;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Glassmorphism Card */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card:hover {
-            border-color: rgba(56, 182, 255, 0.3);
-            box-shadow: 0 0 20px rgba(24, 0, 173, 0.4);
-            transform: translateY(-5px);
-        }
-
-        /* Neon Button */
-        .btn-neon {
-            background: linear-gradient(90deg, var(--color-royal-blue), var(--color-deep-indigo));
-            color: white;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(81, 112, 255, 0.3);
-        }
-
-        .btn-neon::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(90deg, var(--color-neon-cyan), var(--color-sky-blue));
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 0.3s ease;
-        }
-
-        .btn-neon:hover::before {
-            opacity: 1;
-        }
-        
-        .btn-neon:hover {
-            box-shadow: 0 0 25px rgba(9, 205, 249, 0.6);
-            transform: scale(1.02);
-        }
-
-        /* Scroll Reveal Animation Classes */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--color-deep-indigo);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--color-royal-blue);
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <div class="ambient-glow"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-black/20 backdrop-blur-md border-b border-white/5">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-tighter flex items-center gap-2">
-                <svg class="w-8 h-8 text-[#09cdf9]" viewBox="0 0 100 100" fill="none">
-                     <path d="M50 15L90 85H10L50 15Z" stroke="currentColor" stroke-width="4" fill="none"/>
-                     <path d="M50 35L65 85H35L50 35Z" fill="currentColor" fill-opacity="0.8"/>
-                </svg>
-                <span class="text-white">AVINJU<span class="text-[#38b6ff]">TECH</span></span>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                Avinjutech
             </a>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#vision" class="text-gray-300 hover:text-[#09cdf9] transition-colors text-sm uppercase tracking-widest">Vision</a>
-                <a href="#products" class="text-gray-300 hover:text-[#09cdf9] transition-colors text-sm uppercase tracking-widest">Innovation</a>
-                <a href="#services" class="text-gray-300 hover:text-[#09cdf9] transition-colors text-sm uppercase tracking-widest">Consulting</a>
-                <a href="#contact" class="btn-neon px-6 py-2 rounded-full font-bold text-sm tracking-wide">Initialize</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#product" class="text-gray-600 hover:text-blue-600 transition-colors">Our Product</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#contact" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Contact Us</a>
             </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#product" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Our Product</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center pt-20">
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-[#0ed4db]/30 bg-[#0ed4db]/10">
-                <span class="text-[#0ed4db] text-xs font-bold tracking-[0.2em] uppercase">System Online v2.0</span>
-            </div>
-            <h1 class="text-5xl md:text-8xl font-bold leading-tight mb-8">
-                Building the <br>
-                <span class="text-gradient">Digital Velocity</span>
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-                Avinjutech isn't just a software company. We are an innovation lab designing the infrastructure for a zero-friction world. We solve complex problems with elegant, high-performance code.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#products" class="btn-neon px-8 py-4 rounded-lg font-bold text-lg">Explore Our Work</a>
-                <a href="#vision" class="px-8 py-4 rounded-lg border border-white/20 hover:bg-white/5 transition-all text-lg font-medium text-white">Our Vision</a>
-            </div>
-        </div>
-        
-        <!-- Decorative Grid -->
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[--bg-dark] to-transparent"></div>
     </header>
 
-    <!-- Vision Section -->
-    <section id="vision" class="py-24 relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 reveal">We don't predict the future.<br><span class="text-[#38b6ff]">We compile it.</span></h2>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">Solving Business Problems with Modern Technology</h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600">We build high-performance Software as a Service (SaaS) applications and provide expert IT consulting to help your business thrive in the digital age.</p>
+                <a href="#contact" class="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105">Get in Touch</a>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-card p-8 rounded-2xl reveal">
-                    <div class="w-12 h-12 rounded-full bg-[#1800ad]/30 flex items-center justify-center mb-6 text-[#09cdf9]">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Hyper-Efficiency</h3>
-                    <p class="text-gray-400 leading-relaxed">We believe waiting is a bug in the source code of life. Our mission is to optimize human time through intelligent automation and real-time systems.</p>
-                </div>
+        </section>
 
-                <!-- Card 2 -->
-                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 100ms;">
-                    <div class="w-12 h-12 rounded-full bg-[#1800ad]/30 flex items-center justify-center mb-6 text-[#0ed4db]">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">SaaS Architecture</h3>
-                    <p class="text-gray-400 leading-relaxed">Building scalable, multi-tenant platforms is our DNA. We architect systems that grow effortlessly from one user to one million.</p>
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Services</h2>
+                    <p class="mt-4 text-gray-600">From concept to launch, we are your dedicated technology partner.</p>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 200ms;">
-                    <div class="w-12 h-12 rounded-full bg-[#1800ad]/30 flex items-center justify-center mb-6 text-[#5170ff]">
-                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">AI Integration</h3>
-                    <p class="text-gray-400 leading-relaxed">We don't just use AI; we weave it into the fabric of our products to create intuitive, self-optimizing user experiences.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Flagship Product -->
-    <section id="products" class="py-24 relative">
-        <div class="absolute inset-0 bg-[#1800ad] opacity-5 pointer-events-none"></div>
-        <div class="container mx-auto px-6">
-            <div class="glass-card rounded-3xl overflow-hidden border border-[#38b6ff]/20">
-                <div class="grid lg:grid-cols-2 gap-0">
-                    <div class="p-12 flex flex-col justify-center">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="w-2 h-2 rounded-full bg-[#0ed4db] animate-pulse"></span>
-                            <span class="text-[#0ed4db] font-mono text-sm">LIVE DEPLOYMENT</span>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">nowaitinginq</h2>
-                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                            Our flagship platform revolutionizing service queues. A real-time, socket-driven ecosystem connecting businesses and customers to eliminate physical waiting times forever.
-                        </p>
-                        <ul class="space-y-3 mb-10 text-gray-400">
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Real-time WebSocket Updates</li>
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Geolocation & Proximity Search</li>
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Dynamic Subscription Engine</li>
-                        </ul>
-                        <div>
-                            <a href="https://nowaitinginq.in" target="_blank" class="inline-flex items-center gap-2 text-white border-b border-[#38b6ff] pb-1 hover:text-[#38b6ff] transition-colors">
-                                Launch Platform <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-bold mb-2">SaaS Product Development</h3>
+                        <p class="text-gray-600">We design, build, and scale innovative Software as a Service products that solve real-world problems, just like our flagship app, nowaitinginq.</p>
                     </div>
-                    <div class="relative h-96 lg:h-auto bg-gradient-to-br from-[#020412] to-[#1800ad] flex items-center justify-center p-8">
-                        <!-- Abstract Representation of App UI -->
-                        <div class="relative w-full max-w-sm aspect-[9/16] rounded-[2rem] border-4 border-[#333] bg-[#0f172a] shadow-2xl overflow-hidden flex flex-col">
-                             <div class="h-6 w-32 bg-black rounded-b-xl mx-auto absolute top-0 left-0 right-0 z-20"></div>
-                             <div class="p-6 pt-12 flex flex-col h-full">
-                                 <div class="w-12 h-12 rounded-full bg-[#38b6ff]/20 mb-6 animate-pulse"></div>
-                                 <div class="h-4 w-3/4 bg-gray-700 rounded mb-3"></div>
-                                 <div class="h-4 w-1/2 bg-gray-800 rounded mb-8"></div>
-                                 
-                                 <div class="space-y-3">
-                                     <div class="h-16 rounded-xl bg-gradient-to-r from-[#1800ad] to-[#38b6ff] opacity-80"></div>
-                                     <div class="h-16 rounded-xl bg-gray-800/50"></div>
-                                     <div class="h-16 rounded-xl bg-gray-800/50"></div>
-                                 </div>
-                             </div>
-                             <!-- Glow behind phone -->
-                             <div class="absolute -inset-4 bg-[#38b6ff] opacity-20 blur-3xl -z-10"></div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-4">
+                             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
+                        <h3 class="text-xl font-bold mb-2">Custom App Development</h3>
+                        <p class="text-gray-600">Have a unique idea? We specialize in creating custom web and mobile applications tailored to your specific business needs, using the latest technologies.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">IT Consulting</h3>
+                        <p class="text-gray-600">Leverage our expertise to improve your existing applications, optimize your technology stack, and create a roadmap for future growth and success.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="py-24">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl font-bold mb-4">Capabilities</h2>
-                <p class="text-gray-400">Engineering solutions for the modern enterprise.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-xl hover:bg-[#1800ad]/20 cursor-default">
-                    <h3 class="text-[#09cdf9] font-bold text-xl mb-2">01.</h3>
-                    <h4 class="text-xl font-bold text-white mb-2">Cloud Native</h4>
-                    <p class="text-sm text-gray-400">Serverless architectures, Docker containerization, and global edge deployment strategies.</p>
-                </div>
-                <div class="glass-card p-6 rounded-xl hover:bg-[#1800ad]/20 cursor-default">
-                    <h3 class="text-[#0ed4db] font-bold text-xl mb-2">02.</h3>
-                    <h4 class="text-xl font-bold text-white mb-2">SaaS Development</h4>
-                    <p class="text-sm text-gray-400">Multi-tenant database design, subscription billing integration, and role-based security.</p>
-                </div>
-                <div class="glass-card p-6 rounded-xl hover:bg-[#1800ad]/20 cursor-default">
-                    <h3 class="text-[#5170ff] font-bold text-xl mb-2">03.</h3>
-                    <h4 class="text-xl font-bold text-white mb-2">Real-time Systems</h4>
-                    <p class="text-sm text-gray-400">WebSocket integration for live dashboards, chat systems, and instant notifications.</p>
-                </div>
-                 <div class="glass-card p-6 rounded-xl hover:bg-[#1800ad]/20 cursor-default">
-                    <h3 class="text-[#09cdf9] font-bold text-xl mb-2">04.</h3>
-                    <h4 class="text-xl font-bold text-white mb-2">Mobile First</h4>
-                    <p class="text-sm text-gray-400">Progressive Web Apps (PWA) and responsive design ensuring perfection on every device.</p>
-                </div>
-                 <div class="glass-card p-6 rounded-xl hover:bg-[#1800ad]/20 cursor-default">
-                    <h3 class="text-[#0ed4db] font-bold text-xl mb-2">05.</h3>
-                    <h4 class="text-xl font-bold text-white mb-2">Data Intelligence</h4>
-                    <p class="text-sm text-gray-400">Analytics dashboards, data visualization, and reporting engines.</p>
-                </div>
-                <div class="glass-card p-6 rounded-xl hover:bg-[#1800ad]/20 cursor-default flex items-center justify-center border-dashed border-gray-600">
-                    <span class="text-gray-500 font-mono text-sm">...and what's next</span>
+        <!-- Our Product Section -->
+        <section id="product" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <p>Building the future. Coming Soon.</p>
+                    <!-- <div>
+                        <span class="text-blue-600 font-semibold">OUR FLAGSHIP PRODUCT</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">nowaitinginq</h2>
+                        <p class="mt-4 text-gray-600">nowaitinginq is a revolutionary SaaS platform designed to eliminate queues for businesses and customers. From clinics and salons to local shops, our app provides a seamless, real-time queue management system that saves time and enhances customer satisfaction.</p>
+                        <a href="https://nowaitinginq.in" target="_blank" class="mt-6 inline-block bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-black transition-colors">Visit nowaitinginq.in</a>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-xl">
+                        <img src="https://placehold.co/600x400/0D8ABC/FFFFFF?text=App+Screenshot" alt="nowaitinginq App Screenshot" class="rounded-md">
+                    </div> -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-black py-20 border-t border-white/10">
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Mission</h2>
+                <p class="mt-6 text-lg text-gray-600">At Avinjutech, our mission is to empower businesses of all sizes with elegant, powerful, and intuitive software solutions. We believe that technology should be an enabler, simplifying complex problems and creating new opportunities for growth and efficiency.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Have a Project in Mind?</h2>
+                <p class="mt-4 text-gray-300">Let's build something great together. Reach out to us to discuss your idea.</p>
+                <a href="mailto:contact@avinjutech.in" class="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105">contact@avinjutech.in</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Ready to upgrade your reality?</h2>
-            <a href="mailto:hello@avinjutech.com" class="btn-neon px-10 py-4 rounded-full font-bold text-lg inline-flex items-center gap-3">
-                <span>Start Transmission</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-            
-            <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2025 Avinjutech Pvt. Ltd. // System Active</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition-colors">Legal Protocol</a>
-                    <a href="#" class="hover:text-white transition-colors">Privacy Core</a>
-                </div>
-            </div>
+            <p>&copy; 2025 Avinjutech Pvt. Ltd. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        // Trigger once on load
-        reveal();
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
+
 </body>
 </html>
